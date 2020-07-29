@@ -34,12 +34,12 @@ time, mark, audio, video {
     <div class="layout_top" style="margin: 0px 0px 0px 0px;">
        
         <div class="top_bar" style="overflow:hidden;float:left;text-align:center;width:100%;
-        height:100px;margin:-10px -10px 0px 0px;background-color:#fefce7;">
+        height:100px; min-width: 1200px;margin:-10px -10px 0px 0px;background-color:#fefce7;">
             <img src="img/topbar1.jpg">
         </div>
 
         <div class="top_bar2" style="overflow: hidden;float: left;text-align: center;width: 
-        100%;height: 30px;margin: 0px 0px 0px 0px; background-color: #d3d3d3;">
+        100%;min-width: 1200px; height: 30px;margin: 0px 0px 0px 0px; background-color: #d3d3d3;">
             <div style="width: 100%; display: inline;">
                 <div style="width: 30%; float: left; margin-left: 0px;">
                   즐겨찾기
@@ -56,20 +56,24 @@ time, mark, audio, video {
         </div>
       
 
-        <div class="top_searchbar" style="overflow: hidden;float: left;text-align: center;width: 
-        100%;height: 100px;margin: 0px 0px 0px 0px; background-color:#ffffff;">
+        <div class="top_searchbar" style="float: left; overflow: visible;text-align: center;width: 
+        100%px; height: 100px; background-color:#ffffff;">
+            <div style="text-align: center; display: block; margin: auto;">
+                <img src="img/alpang.gif" alt="">
+                <img src="img/searchbar.gif" alt="">
+            </div>
         </div>
 
         <div class="top_categorybar" style="overflow: hidden;float: left;text-align: center;width: 
-        100%;height: 50px;margin: 0px 0px 0px 0px; background-color:#db2929;">
+        100%;min-width: 1200px; height: 50px;margin: 0px 0px 0px 0px; background-color:#db2929;">
         </div>
         <div>
             
             <center>
                 
             <div class="top_categorybar1" style="overflow: hidden;text-align: center;width: 
-            100%;height: 400px;margin: 0px 0px 0px 0px;  max-width: 2600px;">
-            <img src="img/slide.jpg" alt="">
+            100%;height: 400px;min-width: 1200px;margin: 0px 0px 0px 0px;  max-width: 2600px;">
+                <img  src="img/slide.jpg" alt="">
             
             
             </div>
@@ -157,18 +161,17 @@ time, mark, audio, video {
 
     </div>
     <!--그레이존 1-->
-    <div style="background-color: #696969; width: 100%; height: 50px;">
+    <div style="background-color: #696969; width: 100%; height: 50px;min-width: 1200px;">
         
         <!--베스트존-->
-        <div style="width: 1200px; max-width: 1200px;">
+        <div style="width: 1200px; max-width: 1200px;min-width: 1200px;">
             
-            <br>
             <img style="float: left;" src="img/event.jpg" alt="">
         </div>
     </div>
-    <div style="background-color: #696969; width: 100%; height: 20px;"></div>
+
      <!-- 그레이존 2-->
-    <div style="width: 100%; background-color: rgb(105, 105, 105); height: 250px; ">
+    <div style="width: 100%; background-color: rgb(105, 105, 105); height: 250px;min-width: 1200px; ">
    
 
         <!--이벤트존 리스트-->
@@ -182,10 +185,10 @@ time, mark, audio, video {
     </div>
             <br>
      <!--베스트존-->
-    <div style="width: 1200px; max-width: 1200px;">
+    <div style="width: 1200px; max-width: 1200px;min-width: 1200px;">
       
         
-        <img style="float: left;" src="img/best.jpg" alt="">
+        <img style="float: left;min-width: 1200px;" src="img/best.jpg" alt="">
         
         <div style=" float:left; border-right: 1px dashed #c9c9c9; width: 190px; height: 240px; margin: 10px 5px 0px 0px;">
             <img width="140" height="140" src="img/140sample.jpg" style="margin-top: 10px;">
