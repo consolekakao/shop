@@ -1,3 +1,11 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: ALPACA
+  Date: 2020-07-27
+  Time: 오후 3:59
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,11 +46,12 @@ a:link {  color: black; text-decoration: none;}
 </style>
 <body style="margin: 0px 0px 0px 0px;"> 
     <!--상단 시작-->
-    <div class="layout_top" style="margin: 0px 0px 0px 0px;">
-       
+
+    
+
         <div class="top_bar" style="overflow:hidden;float:left;text-align:center;width:100%;
-        height:100px; min-width: 1200px;margin:-10px -10px 0px 0px;background-color:#fefce7;">
-            <img src="img/topbar1.jpg">
+        height:100px; min-width: 1200px;margin:-10px -10px 0px 0px;background-color:#467ef7;">
+            
         </div>
 
         <div class="top_bar2" style="overflow: hidden;float: left;text-align: center;width: 
@@ -62,42 +71,61 @@ a:link {  color: black; text-decoration: none;}
     
         </div>
       
+<!--
 
-        <div class="top_searchbar" style="float: left; overflow: hidden;text-align: center;width: 
-        100%; height: 100px; background-color:#ffffff;">
-            <div style="text-align: center; ">
-
-                <div>
-                    <img style="float: left; margin-left: auto;" src="img/alpang.gif" alt="">
-                </div>
-                <div style="float: left; width: 200px; height:  60px;  border-left: 3px solid skyblue;  border-bottom: 3px solid skyblue;  border-top: 3px solid skyblue; margin: 20px 0px 10px 100px; overflow: visible;"></div>
-                <div style="float: left; width: 500px; height:  60px;  border: 3px solid skyblue; margin: 20px 0px 10px 0px; overflow: visible;">
-                    <div style="float: right;">
-                        <img style="width: 50px; height: 50px;" src="img/search_1.gif" alt="">
-                    </div>
+        <div class="top_searchbar" style="border: 3px solid rebeccapurple; float: left; overflow: hidden;text-align: center;width: 
+        100%; height: 150px; min-height: 150px; max-height: 150px; background-color:#ffffff; min-width: 950px; ">
+            <div style="border: 3px solid rebeccapurple; text-align: center; min-width: 950px; max-height: 150px; position: absolute; top: 120px; left: 30%; ">
                 
+                <img style="border: 3px solid rebeccapurple; float: left;" src="img/alpang.gif" alt="">
+                <div style="float: left; width: 700px; height:  60px;   border: 3px solid rgb(37, 98, 230); margin: 20px 0px 10px 0px; overflow: hidden; ">
+                    <div style="float: left; width: 200px; height: 60px; border-right: 3px solid rgb(37, 98, 230);"></div>
+                    <div style="float: right;">   <img style="width: 50px; height: 50px; margin: 0px 3px 0px 0px;" src="img/search_1.gif" alt=""> </div>
                 </div>
                 
-                </div>
             </div>
         </div>
 
-        <div class="top_categorybar" style="overflow: hidden;float: left;text-align: center;width: 
-        100%;min-width: 1200px; height: 50px;margin: 0px 0px 0px 0px; background-color:#db2929;">
+-->        
+       
+
+
+
+
+
+    <div style="float: left; width: 100%; height: 150px; min-width: 950px; text-align: center;  margin-left: 30%; ">
+        
+    
+        <img style="float: left;"  src="img/alpang.gif" alt="">
+        <div style="float: left; border: 3px solid skyblue; width: 500px; height: 50px; margin-top: 30px; ">
+            <div style="border-right: 3px solid skyblue; height: 50px; width: 150px; float: left;"></div>
+            <div style="height: 50px; width: 340px; float: left; ">
+            <div style="float: right;"><img style="width: 40px; height: 40px; " src="img/search_1.gif" alt=""></div>
+            </div>
+           
         </div>
-        <div>
+
+    
+    
+    </div>
+
+
+
+
+
+
+    <div>
             
             <center>
                 
             <div class="top_categorybar1" style="overflow: hidden;text-align: center;width: 
-            100%;height: 400px;margin: 0px 0px 0px 0px;  max-width: 2600px;">
-                대문 영역
-            
+            100%;height: 450px;margin: 0px 0px 0px 0px;  background-color: #ebeb56;">
+                <img src="img/main.jpg" alt="">
             
             </div>
             </center>
-        </div>
     </div>
+    
          <center>
               <!--메인 시작-->
     <div style="margin-top: 20px; background-color: #FFFFFF; height: 1000px; width: 1200px; max-width: 1200px;">
