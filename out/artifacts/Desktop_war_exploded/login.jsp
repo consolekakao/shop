@@ -9,6 +9,26 @@
     
 </head>
 <body>
+
+
+
+
+<% if(session.getAttribute("id") != null) {
+    response.sendRedirect("http://alpacao.cafe24.com/shop/index.jsp");
+}
+    else{
+%>
+
+
+
+
+
+
+
+
+
+
+
     <center>
 
         
@@ -35,3 +55,7 @@
     </center>
 </body>
 </html>
+
+<%
+    }
+%>

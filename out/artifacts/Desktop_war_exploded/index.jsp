@@ -7,11 +7,12 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta viewport content="width=device-width">
     <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <!-- CSS 초기화-->
 <style>
@@ -37,6 +38,7 @@ time, mark, audio, video {
   
 
 }
+input:focus{outline: none;}
 
 a:link {  color: black; text-decoration: none;}
  a:visited { color: black; text-decoration: none;}
@@ -44,6 +46,7 @@ a:link {  color: black; text-decoration: none;}
 
 
 </style>
+
 <body style="margin: 0px 0px 0px 0px;"> 
     <!--상단 시작-->
 
@@ -62,7 +65,21 @@ a:link {  color: black; text-decoration: none;}
                 </div>
 
                 <div style="width: 70%; float:right;margin: 0px 0px 0px 0px;">
-                    <a href="#"> 로그인 </a> | <a href="#"> 회원가입 </a> | 
+                    <% if(session.getAttribute("id") == null) { %>
+                    <a href="login.jsp"> 로그인 </a>
+                    | <a href="#"> 회원가입 </a>
+                    <%}
+                    else {
+                    %>
+                    <a href="logout.jsp"> 로그아웃 </a>
+                    <%
+                        }
+                    %>
+
+
+
+
+                     |
                     <a href="#"> 장바구니 </a> | <a href="#"> 주문/배송 </a> | 
                     <a href="#"> 고객센터 </a> 
                 </div>
@@ -71,23 +88,7 @@ a:link {  color: black; text-decoration: none;}
     
         </div>
       
-<!--
 
-        <div class="top_searchbar" style="border: 3px solid rebeccapurple; float: left; overflow: hidden;text-align: center;width: 
-        100%; height: 150px; min-height: 150px; max-height: 150px; background-color:#ffffff; min-width: 950px; ">
-            <div style="border: 3px solid rebeccapurple; text-align: center; min-width: 950px; max-height: 150px; position: absolute; top: 120px; left: 30%; ">
-                
-                <img style="border: 3px solid rebeccapurple; float: left;" src="img/alpang.gif" alt="">
-                <div style="float: left; width: 700px; height:  60px;   border: 3px solid rgb(37, 98, 230); margin: 20px 0px 10px 0px; overflow: hidden; ">
-                    <div style="float: left; width: 200px; height: 60px; border-right: 3px solid rgb(37, 98, 230);"></div>
-                    <div style="float: right;">   <img style="width: 50px; height: 50px; margin: 0px 3px 0px 0px;" src="img/search_1.gif" alt=""> </div>
-                </div>
-                
-            </div>
-        </div>
-
--->        
-       
 
 
 
@@ -98,8 +99,8 @@ a:link {  color: black; text-decoration: none;}
     
         <img style="float: left;"  src="img/alpang.gif" alt="">
         <div style="float: left; border: 3px solid skyblue; width: 500px; height: 50px; margin-top: 30px; ">
-            <div style="border-right: 3px solid skyblue; height: 50px; width: 150px; float: left;"></div>
-            <div style="height: 50px; width: 340px; float: left; ">
+            <div style="border-right: 3px solid skyblue; height: 47px; width: 150px; float: left;"></div>
+            <div style="height: 50px; width: 340px; float: left; "> <input style="float: left; width: 290px; height: 40px; margin-left: 5px;border:none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px;" type="text" >
             <div style="float: right;"><img style="width: 40px; height: 40px; " src="img/search_1.gif" alt=""></div>
             </div>
            
@@ -119,60 +120,30 @@ a:link {  color: black; text-decoration: none;}
             <center>
                 
             <div class="top_categorybar1" style="overflow: hidden;text-align: center;width: 
-            100%;height: 450px;margin: 0px 0px 0px 0px;  background-color: #ebeb56;">
-                <img src="img/main.jpg" alt="">
+            100%;height: 450px;margin: 0px 0px 0px 0px;  background-color: #cecec9; min-width: 100%; ">
+                <img  style="min-width: 900px;" src="img/main.jpg" alt="">
             
             </div>
             </center>
     </div>
     
+<div style="width: 100%; height: 100px; background-color: #ffffff;"></div>
+
+<!-- 바디 -->
+<div style="width: 100%; min-width: 1200px;">
+    
+
+    <div style="height: 3000px; width: 20%; background-color: #ffffff; float: left;"></div> <!--좌측 바디-->
+    <div style="height: 3000px; width: 20%; background-color: #ffffff; float: right;"></div> <!--우측바디-->
+
+
          <center>
-              <!--메인 시작-->
-    <div style="margin-top: 20px; background-color: #FFFFFF; height: 1000px; width: 1200px; max-width: 1200px;">
-   
-        <div style="float: left; width: 520px; height: 960px; 
-        background-color: #FFFFFF; margin: 20px 5px 20px 5px;">
-            <div style="border: 1px solid #c9c9c9; height: 460px; width: 500px; margin: 10px 10px 20px 10px;  background-color: #FFFFFF;">
-                <img src="img/sample500.jpg" alt="">
-            </div>
-            <div style="border: 1px solid #c9c9c9; height: 460px; width: 500px; margin: 10px 10px 10px 10px; background-color: #FFFFFF;">
-                <img src="img/sample500.jpg" alt="">
-            </div>
-        </div>
-
-        <div style="float: right; width: 330px ;height: 960px; 
-        background-color: #FFFFFF; margin: 20px 5px 20px 0px;">
-            <div style="border: 1px solid #c9c9c9; height: 300px; width: 310px; background-color: #FFFFFF; margin: 10px 10px 20px 10px;">
-                <img src="img/sample300.jpg" alt="">
-            </div>
-            <div style="border: 1px solid #c9c9c9; height: 300px; width: 310px; background-color: #FFFFFF; margin: 10px 10px 20px 10px;">
-                <img src="img/sample300.jpg" alt="">
-            </div>
-            <div style="border: 1px solid #c9c9c9; height: 300px; width: 310px; background-color: #FFFFFF; margin: 10px 10px 20px 10px;">
-                <img src="img/sample300.jpg" alt="">
-            </div>          
-        </div>
-
-        <div style="float: left; width: 330px ;height: 960px; 
-        background-color: #FFFFFF; margin: 20px 5px 20px 0px;">
-            <div style="border: 1px solid #c9c9c9; height: 300px; width: 310px; background-color: #FFFFFF; margin: 10px 10px 20px 10px;">
-                <img src="img/sample300.jpg" alt="">
-            </div>
-            <div style="border: 1px solid #c9c9c9; height: 300px; width: 310px; background-color: #FFFFFF; margin: 10px 10px 20px 10px;">
-                <img src="img/sample300.jpg" alt="">
-            </div>
-            <div style="border: 1px solid #c9c9c9; height: 300px; width: 310px; background-color: #FFFFFF; margin: 10px 10px 20px 10px;">
-                <img src="img/sample300.jpg" alt="">
-            </div>          
-        </div>
-
-    </div>
- <!--메인 경계-->
+         
     
 
     <!--여성패션-->
     <div style="float :auto; margin: 0px 20% 0px 20%; border-top: 5px solid rgb(226, 118, 217); border-bottom: 1px solid #cecec9;
-     width: 1160px; max-width: 1160px; height: 600px;">
+     width: 50%px; max-width: 1200px; height: 600px; min-width: 1200px;">
     
 
         <!-- 카테고리 구역-->
@@ -195,7 +166,7 @@ a:link {  color: black; text-decoration: none;}
 
         <!--프로모션 구역-->
         <div style="float: left;width: 325px; height: 600px;">
-            <img src="img/promotion1.png" alt="">
+            <img style="width: 325px; height: 595px;" src="img/promotion1.png" alt="">
         </div>
 
 
@@ -295,7 +266,7 @@ a:link {  color: black; text-decoration: none;}
 
         <!--프로모션 구역-->
         <div style="float: left;width: 325px; height: 600px;">
-            <img src="img/promotion2.jpg" alt="">
+            <img style="width: 325px; height: 595px;" src="img/promotion2.jpg" alt="">
         </div>
 
 
@@ -363,8 +334,8 @@ a:link {  color: black; text-decoration: none;}
 
 
     </div>
-
-
+    
+</div> <!--전체 바디 종료-->
 <!--경계-->
 <div style="width: 1200px; height: 50px;">
 </div>
