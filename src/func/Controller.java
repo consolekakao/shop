@@ -26,4 +26,23 @@ public boolean logincheck(String id,String pw){
     }
     return false;
 }
+
+
+
+
+    public boolean cccc(String a, String b){
+        if(a.equals(b)) return true;
+        else return false;
+    }
+
+
+
+
+
+
+
+
+
+
+
 }
