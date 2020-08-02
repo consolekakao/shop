@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta viewport content="width=device-width">
     <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <!-- CSS 초기화-->
 <style>
@@ -26,16 +28,27 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-    
+  
+
 }
+input:focus{outline: none;}
+
+a:link {  color: black; text-decoration: none;}
+ a:visited { color: black; text-decoration: none;}
+ a:hover {  color: black; text-decoration: none;}
+
+
 </style>
-<body style="margin: 0px 0px 0px 0px;"> 
+
+<body style="margin: 0px 0px 0px 0px; min-width: 1200px; width: 100%;"> 
     <!--상단 시작-->
-    <div class="layout_top" style="margin: 0px 0px 0px 0px;">
-       
+    <center>
+
+   
+
         <div class="top_bar" style="overflow:hidden;float:left;text-align:center;width:100%;
-        height:100px; min-width: 1200px;margin:-10px -10px 0px 0px;background-color:#fefce7;">
-            <img src="img/topbar1.jpg">
+        height:100px; min-width: 1200px;margin:-10px -10px 0px 0px;background-color:#467ef7;">
+            
         </div>
 
         <div class="top_bar2" style="overflow: hidden;float: left;text-align: center;width: 
@@ -46,7 +59,17 @@ time, mark, audio, video {
                 </div>
 
                 <div style="width: 70%; float:right;margin: 0px 0px 0px 0px;">
-                    <a href="#"> 로그인 </a> | <a href="#"> 회원가입 </a> | 
+                   
+                    <a href="login.jsp"> 로그인 </a>
+                    |
+                   
+                    <a href="logout.jsp"> 로그아웃 </a>
+                   
+
+
+
+
+                     |
                     <a href="#"> 장바구니 </a> | <a href="#"> 주문/배송 </a> | 
                     <a href="#"> 고객센터 </a> 
                 </div>
@@ -56,273 +79,254 @@ time, mark, audio, video {
         </div>
       
 
-        <div class="top_searchbar" style="float: left; overflow: visible;text-align: center;width: 
-        100%px; height: 100px; background-color:#ffffff;">
-            <div style="text-align: center; display: block; margin: auto;">
-                <img src="img/alpang.gif" alt="">
-                <img src="img/searchbar.gif" alt="">
-            </div>
-        </div>
 
-        <div class="top_categorybar" style="overflow: hidden;float: left;text-align: center;width: 
-        100%;min-width: 1200px; height: 50px;margin: 0px 0px 0px 0px; background-color:#db2929;">
-        </div>
-        <div>
-            
-            <div class="top_categorybar1" style="overflow: hidden;text-align: center;width: 
-            100%;height: 400px;min-width: 1200px;margin: 0px 0px 0px 0px;  max-width: 2600px;">
-                <img  src="img/slide.jpg" alt="">
-            
-            
-            </div>
+
+
+
+
+    <div style="float: left; width: 100%; height: 150px; min-width: 950px; text-align: center;  margin-left: 30%; ">
         
-        </div>
-    </div>
-         <center>
-              <!--메인 시작-->
-    <div style="margin-top: 20px; background-color: #FFFFFF; height: 1000px; width: 1200px; max-width: 1200px;">
-   
-        <div style="float: left; width: 520px; height: 960px; 
-        background-color: #FFFFFF; margin: 20px 5px 20px 5px;">
-            <div style="border: 1px solid #c9c9c9; height: 460px; width: 500px; margin: 10px 10px 20px 10px;  background-color: #FFFFFF;">
-                <img src="img/sample500.jpg" alt="">
-            </div>
-            <div style="border: 1px solid #c9c9c9; height: 460px; width: 500px; margin: 10px 10px 10px 10px; background-color: #FFFFFF;">
-                <img src="img/sample500.jpg" alt="">
-            </div>
-        </div>
-
-        <div style="float: right; width: 330px ;height: 960px; 
-        background-color: #FFFFFF; margin: 20px 5px 20px 0px;">
-            <div style="border: 1px solid #c9c9c9; height: 300px; width: 310px; background-color: #FFFFFF; margin: 10px 10px 20px 10px;">
-                <img src="img/sample300.jpg" alt="">
-            </div>
-            <div style="border: 1px solid #c9c9c9; height: 300px; width: 310px; background-color: #FFFFFF; margin: 10px 10px 20px 10px;">
-                <img src="img/sample300.jpg" alt="">
-            </div>
-            <div style="border: 1px solid #c9c9c9; height: 300px; width: 310px; background-color: #FFFFFF; margin: 10px 10px 20px 10px;">
-                <img src="img/sample300.jpg" alt="">
-            </div>          
-        </div>
-
-        <div style="float: left; width: 330px ;height: 960px; 
-        background-color: #FFFFFF; margin: 20px 5px 20px 0px;">
-            <div style="border: 1px solid #c9c9c9; height: 300px; width: 310px; background-color: #FFFFFF; margin: 10px 10px 20px 10px;">
-                <img src="img/sample300.jpg" alt="">
-            </div>
-            <div style="border: 1px solid #c9c9c9; height: 300px; width: 310px; background-color: #FFFFFF; margin: 10px 10px 20px 10px;">
-                <img src="img/sample300.jpg" alt="">
-            </div>
-            <div style="border: 1px solid #c9c9c9; height: 300px; width: 310px; background-color: #FFFFFF; margin: 10px 10px 20px 10px;">
-                <img src="img/sample300.jpg" alt="">
-            </div>          
-        </div>
-
-    </div>
- <!--메인 경계-->
-    <div style=" margin-top: 5px; background-color: #FFFFFF; height: 50px; width: 1200px; max-width: 1200px;">
-       <img src="img/category.jpg">
-    </div>
-<!--카테고리 바-->
-    <div style="margin-top: 10px;  width: 1200px; max-width: 1200px; height: 510px;">
-        <div style=" float: left; width: 250px; height: 500px;">
-            
-            <ul style="width: 100%;">
-                <li name="bestitem_tap" style="border-bottom: 1px solid #c9c9c9; height: 100px; background-color: darkgrey;" ></li>
-                <li name="bestitem_tap" style="border-bottom: 1px solid #c9c9c9; height: 100px; background-color: darkgrey;" ></li>
-                <li name="bestitem_tap" style="border-bottom: 1px solid #c9c9c9; height: 100px; background-color: darkgrey;" ></li>
-                <li name="bestitem_tap" style="border-bottom: 1px solid #c9c9c9; height: 100px; background-color: darkgrey;" ></li>
-                <li name="bestitem_tap" style=" height: 100px; background-color: darkgrey;" ></li>
-            </ul>
-        </div>
-
-        <div style=" width: 960px; max-width: 960px; height: 490px; margin: 10px 0px 10px 250px;">
-            <div style="float: left; border: 1px solid #c9c9c9; width: 300px;max-width: 300px; height: 480px; margin: 3px 5px 10px 10px;"></div>
-            <div style="float: left; border: 1px solid #c9c9c9; width: 200px; max-width: 200px; height: 480px; margin: 3px 10px 10px 0px;">
-                <div style="float: left; border: 1px solid #c9c9c9; width: 190px; max-width: 190px; height: 230px;margin: 5px 0px 0px 5px;"></div>
-                <div style="float: left; border: 1px solid #c9c9c9; width: 190px; max-width: 190px; height: 230px;margin: 5px 0px 0px 5px;"></div>
-              
-            </div>
-
-            <div style="float: left; border: 1px solid #c9c9c9; width: 200px; max-width: 200px; height: 480px; margin: 3px 10px 10px 0px;">
-                <div style="float: left; border: 1px solid #c9c9c9; width: 190px; max-width: 190px; height: 230px;margin: 5px 0px 0px 5px;"></div>
-                <div style="float: left; border: 1px solid #c9c9c9; width: 190px; max-width: 190px; height: 230px;margin: 5px 0px 0px 5px;"></div>
-                
-            </div>
-
-            <div style="float: left; border: 1px solid #c9c9c9; width: 200px; max-width: 200px; height: 480px; margin: 3px 10px 10px 0px;">
-                <div style="float: left; border: 1px solid #c9c9c9; width: 190px; max-width: 190px; height: 230px;margin: 5px 0px 0px 5px;"></div>
-                <div style="float: left; border: 1px solid #c9c9c9; width: 190px; max-width: 190px; height: 230px;margin: 5px 0px 0px 5px;"></div>
-               
-            </div>
-        </div>
-
-    </div>
-    <!--그레이존 1-->
-    <div style="background-color: #696969; width: 100%; height: 50px;min-width: 1200px;">
-        
-        <!--베스트존-->
-        <div style="width: 1200px; max-width: 1200px;min-width: 1200px;">
-            
-            <img style="float: left;" src="img/event.jpg" alt="">
-        </div>
-    </div>
-
-     <!-- 그레이존 2-->
-    <div style="width: 100%; background-color: rgb(105, 105, 105); height: 250px;min-width: 1200px; ">
-   
-
-        <!--이벤트존 리스트-->
-        <div style="width: 1000px; max-width: 1000px; height: 200px; background-color: #FFFFFF; ">
-            
-        
-            <div style="border: 1px solid #c9c9c9; height: 190px;width: 320px; margin: 5px 5px 5px 5px; float: left;"></div>
-            <div style="border: 1px solid #c9c9c9; height: 190px;width: 320px; margin: 5px 5px 5px 5px; float: left;"></div>
-            <div style="border: 1px solid #c9c9c9; height: 190px;width: 320px; margin: 5px 5px 5px 5px; float: left;"></div>
-        </div>
-    </div>
-            <br>
-     <!--베스트존-->
-    <div style="width: 1200px; max-width: 1200px;min-width: 1200px;">
-      
-        
-        <img style="float: left;min-width: 1200px;" src="img/best.jpg" alt="">
-        
-        <div style=" float:left; border-right: 1px dashed #c9c9c9; width: 190px; height: 240px; margin: 10px 5px 0px 0px;">
-            <img width="140" height="140" src="img/140sample.jpg" style="margin-top: 10px;">
-        </div>
-        <div style=" float:left; border-right: 1px dashed #c9c9c9; width: 190px; height: 240px; margin: 10px 5px 0px 0px;">
-            <img width="140" height="140" src="img/140sample.jpg" style="margin-top: 10px;">
-        </div>
-        <div style=" float:left; border-right: 1px dashed #c9c9c9; width: 190px; height: 240px; margin: 10px 5px 0px 0px;">
-            <img width="140" height="140" src="img/140sample.jpg" style="margin-top: 10px;">
-        </div>
-        <div style=" float:left; border-right: 1px dashed #c9c9c9; width: 190px; height: 240px; margin: 10px 5px 0px 0px;">
-            <img width="140" height="140" src="img/140sample.jpg" style="margin-top: 10px;">
-        </div>
-        <div style=" float:left; border-right: 1px dashed #c9c9c9; width: 190px; height: 240px; margin: 10px 5px 0px 0px;">
-            <img width="140" height="140" src="img/140sample.jpg" style="margin-top: 10px;">
-        </div>
-        <div style=" float:left;  width: 190px; height: 240px; margin: 10px 5px 0px 0px;">
-            <img width="140" height="140" src="img/140sample.jpg" style="margin-top: 10px;">
-        </div>
-    </div>
-<br>
-    <div style="width: 1200px; max-width: 1200px;">
     
-        <a href="#">
-            <div style="border: 1px solid #c9c9c9; width: 280px; max-width: 280px; height: 400px; float: left; margin: 30px 5px;">
-                <img style="width: 280px; height: 280px;" src="img/280sample.jpg">
-                <div style="float: left; width: 280px; height:36px;line-height:18px;font-size:16px; color:#333; overflow:hidden; 
-                text-overflow:ellipsis;margin-left: 20px; text-align: left;">
-                test
-                </div>
-            <hr>
-                <div style="float: left ; width: 160px; height: 100px; text-align: left; margin: 10px 10px 10px 10px;">판매가</div>
-                <div style="float: left ; width: 60px; height: 100px; text-align: left; margin: 10px 10px 10px 10px; ">5000원</div>
-
+        <img style="float: left;"  src="img/alpang.gif" alt="">
+        <div style="float: left; border: 3px solid skyblue; width: 500px; height: 50px; margin-top: 30px; ">
+            <div style="border-right: 3px solid skyblue; height: 47px; width: 150px; float: left;"></div>
+            <div style="height: 50px; width: 340px; float: left; "> <input style="float: left; width: 290px; height: 40px; margin-left: 5px;border:none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px;" type="text" >
+            <div style="float: right;"><img style="width: 40px; height: 40px; " src="img/search_1.gif" alt=""></div>
             </div>
-        </a>
+           
+        </div>
 
-        <a href="#">
-            <div style="border: 1px solid #c9c9c9; width: 280px; max-width: 280px; height: 400px; float: left; margin: 30px 5px;">
-                <img style="width: 280px; height: 280px;" src="img/280sample.jpg">
-                <div style="float: left; width: 280px; height:36px;line-height:18px;font-size:16px; color:#333; overflow:hidden; 
-                text-overflow:ellipsis;margin-left: 20px; text-align: left;">
-                test
-                </div>
-            <hr>
-                <div style="float: left ; width: 160px; height: 100px; text-align: left; margin: 10px 10px 10px 10px;">판매가</div>
-                <div style="float: left ; width: 60px; height: 100px; text-align: left; margin: 10px 10px 10px 10px; ">5000원</div>
+    
+    
+    </div>
 
+
+
+
+
+
+    <div>
+            
+            
+                
+            <div class="top_categorybar1" style="overflow: hidden;text-align: center;width: 
+            100%;height: 450px;margin: 0px 0px 0px 0px;  background-color: #cecec9; min-width: 100%; ">
+                <img  style="min-width: 900px;" src="img/main.jpg" alt="">
+            
             </div>
-        </a>
-        <a href="#">
-            <div style="border: 1px solid #c9c9c9; width: 280px; max-width: 280px; height: 400px; float: left; margin: 30px 5px;">
-                <img style="width: 280px; height: 280px;" src="img/280sample.jpg">
-                <div style="float: left; width: 280px; height:36px;line-height:18px;font-size:16px; color:#333; overflow:hidden; 
-                text-overflow:ellipsis;margin-left: 20px; text-align: left;">
-                test
-                </div>
-            <hr>
-                <div style="float: left ; width: 160px; height: 100px; text-align: left; margin: 10px 10px 10px 10px;">판매가</div>
-                <div style="float: left ; width: 60px; height: 100px; text-align: left; margin: 10px 10px 10px 10px; ">5000원</div>
+            </center>
+    </div>
+    
+<div style="width: 100%; height: 100px; background-color: #ffffff;"></div>
 
-            </div>
-        </a>
-        <a href="#">
-            <div style="border: 1px solid #c9c9c9; width: 280px; max-width: 280px; height: 400px; float: left; margin: 30px 5px;">
-                <img style="width: 280px; height: 280px;" src="img/280sample.jpg">
-                <div style="float: left; width: 280px; height:36px;line-height:18px;font-size:16px; color:#333; overflow:hidden; 
-                text-overflow:ellipsis;margin-left: 20px; text-align: left;">
-                test
-                </div>
-            <hr>
-                <div style="float: left ; width: 160px; height: 100px; text-align: left; margin: 10px 10px 10px 10px;">판매가</div>
-                <div style="float: left ; width: 60px; height: 100px; text-align: left; margin: 10px 10px 10px 10px; ">5000원</div>
+<!-- 바디 -->
+<div style="width: 100%; min-width: 1200px;">
+    
 
-            </div>
-        </a>
-        <a href="#">
-            <div style="border: 1px solid #c9c9c9; width: 280px; max-width: 280px; height: 400px; float: left; margin: 30px 5px;">
-                <img style="width: 280px; height: 280px;" src="img/280sample.jpg">
-                <div style="float: left; width: 280px; height:36px;line-height:18px;font-size:16px; color:#333; overflow:hidden; 
-                text-overflow:ellipsis;margin-left: 20px; text-align: left;">
-                test
-                </div>
-            <hr>
-                <div style="float: left ; width: 160px; height: 100px; text-align: left; margin: 10px 10px 10px 10px;">판매가</div>
-                <div style="float: left ; width: 60px; height: 100px; text-align: left; margin: 10px 10px 10px 10px; ">5000원</div>
 
-            </div>
-        </a>
-        <a href="#">
-            <div style="border: 1px solid #c9c9c9; width: 280px; max-width: 280px; height: 400px; float: left; margin: 30px 5px;">
-                <img style="width: 280px; height: 280px;" src="img/280sample.jpg">
-                <div style="float: left; width: 280px; height:36px;line-height:18px;font-size:16px; color:#333; overflow:hidden; 
-                text-overflow:ellipsis;margin-left: 20px; text-align: left;">
-                test
-                </div>
-            <hr>
-                <div style="float: left ; width: 160px; height: 100px; text-align: left; margin: 10px 10px 10px 10px;">판매가</div>
-                <div style="float: left ; width: 60px; height: 100px; text-align: left; margin: 10px 10px 10px 10px; ">5000원</div>
 
-            </div>
-        </a>
-        <a href="#">
-            <div style="border: 1px solid #c9c9c9; width: 280px; max-width: 280px; height: 400px; float: left; margin: 30px 5px;">
-                <img style="width: 280px; height: 280px;" src="img/280sample.jpg">
-                <div style="float: left; width: 280px; height:36px;line-height:18px;font-size:16px; color:#333; overflow:hidden; 
-                text-overflow:ellipsis;margin-left: 20px; text-align: left;">
-                test
-                </div>
-            <hr>
-                <div style="float: left ; width: 160px; height: 100px; text-align: left; margin: 10px 10px 10px 10px;">판매가</div>
-                <div style="float: left ; width: 60px; height: 100px; text-align: left; margin: 10px 10px 10px 10px; ">5000원</div>
+         <center>
+         
+    
 
-            </div>
-        </a>
-        <a href="#">
-            <div style="border: 1px solid #c9c9c9; width: 280px; max-width: 280px; height: 400px; float: left; margin: 30px 5px;">
-                <img style="width: 280px; height: 280px;" src="img/280sample.jpg">
-                <div style="float: left; width: 280px; height:36px;line-height:18px;font-size:16px; color:#333; overflow:hidden; 
-                text-overflow:ellipsis;margin-left: 20px; text-align: left;">
-                test
-                </div>
-            <hr>
-                <div style="float: left ; width: 160px; height: 100px; text-align: left; margin: 10px 10px 10px 10px;">판매가</div>
-                <div style="float: left ; width: 60px; height: 100px; text-align: left; margin: 10px 10px 10px 10px; ">5000원</div>
+    <!--여성패션-->
+    <div style="float :auto; margin: 0px 20% 0px 20%; border-top: 5px solid rgb(226, 118, 217); border-bottom: 1px solid #cecec9;
+     width: 50%px; max-width: 1200px; height: 600px; min-width: 1200px;">
+    
 
+        <!-- 카테고리 구역-->
+        <div style="float: left; width: 180px; border-right: 1px solid #cecec9; height: 600px; text-align: center;">
+
+            <div style=" font: bold; font-size: 30px; color: rgb(226, 118, 217); margin-top: 40px;"><b>여성패션</b></div>
+            <div style="float: left; margin-left: 30px;">바로가기 ></div>
+
+            <div style="float: left;">
+                <div style=" font-size: 20px; color: rgb(226, 118, 217); margin-top: 220px; margin-left: 20px; "><b>HOT 키워드</b></div>
+                <div style=" width: 120px; height: 34px; border: 1px solid #cecec9; margin-left: 20px; margin-top: 5px; color: rgb(226, 118, 217); "><div style="margin-top: 5px;"> #keyword1</div></div>
+                <div style=" width: 120px; height: 34px; border: 1px solid #cecec9; margin-left: 20px; margin-top: 5px; color: rgb(226, 118, 217); "><div style="margin-top: 5px;"> #keyword2</div></div>
+                <div style=" width: 120px; height: 34px; border: 1px solid #cecec9; margin-left: 20px; margin-top: 5px; color: rgb(226, 118, 217); "><div style="margin-top: 5px;"> #keyword3</div></div>
+                <div style=" width: 120px; height: 34px; border: 1px solid #cecec9; margin-left: 20px; margin-top: 5px; color: rgb(226, 118, 217); "><div style="margin-top: 5px;"> #keyword4</div></div>
+                <div style=" width: 120px; height: 34px; border: 1px solid #cecec9; margin-left: 20px; margin-top: 5px; color: rgb(226, 118, 217); "><div style="margin-top: 5px;"> #keyword5</div></div>
+                <div style=" width: 120px; height: 34px; border: 1px solid #cecec9; margin-left: 20px; margin-top: 5px; color: rgb(226, 118, 217); "><div style="margin-top: 5px;"> #keyword6</div></div>
             </div>
-        </a>
+        </div>
+
+
+        <!--프로모션 구역-->
+        <div style="float: left;width: 325px; height: 600px;">
+            <img style="width: 325px; height: 595px;" src="img/promotion1.png" alt="">
+        </div>
+
+
+
+        <!--아이템 구역-->
+        <div style="float:left;">
         
+            <!--상단-->
+            <div style="width: 630px; height: 270px; margin: 20px 10px 0px 10px;">
+            
+                    <div style="float: left;  width: 190px; height: 260px; margin: 0px 10px 0px 20px;">
+                        <a href="#">
+                        <img src="img/sample160.jpg" alt="">
+                        <div style="margin-top: 10px; ">옷옷옷옷옷</div>
+                        <div style="font-weight: bold; margin-top: 10px;">18,000원</div>
+                        </a>
+                    </div>
+                    <div style="float: left; width: 190px; height: 260px; margin: 0px 10px 0px 0px;">
+                        <a href="#">
+                            <img src="img/sample160_2.jpg" alt="">
+                            <div style="margin-top: 10px; ">옷옷옷옷옷</div>
+                            <div style="font-weight: bold; margin-top: 10px;">18,000원</div>
+                            </a>
+                    </div>
+                    <div style="float: left; width: 190px; height: 260px; margin: 0px 5px 0px 0px;">
+                        <a href="#">
+                            <img src="img/sample160_3.jpg" alt="">
+                            <div style="margin-top: 10px; ">옷옷옷옷옷</div>
+                            <div style="font-weight: bold; margin-top: 10px;">18,000원</div>
+                            </a>
+                    </div>
+            
+            </div>
+        
+        <hr>
+            <!--하단-->
+            <div style="width: 630px; height: 270px; margin: 20px 10px 0px 10px; float: left;">
+            
+                <div style="float: left;  width: 190px; height: 260px; margin: 0px 10px 0px 20px;">
+                    <a href="#">
+                    <img src="img/sample160_3.jpg" alt="">
+                    <div style="margin-top: 10px; ">옷옷옷옷옷</div>
+                    <div style="font-weight: bold; margin-top: 10px;">18,000원</div>
+                    </a>
+                </div>
+                <div style="float: left; width: 190px; height: 260px; margin: 0px 10px 0px 0px;">
+                    <a href="#">
+                        <img src="img/sample160_2.jpg" alt="">
+                        <div style="margin-top: 10px; ">옷옷옷옷옷</div>
+                        <div style="font-weight: bold; margin-top: 10px;">18,000원</div>
+                        </a>
+                </div>
+                <div style="float: left; width: 190px; height: 260px; margin: 0px 5px 0px 0px;">
+                    <a href="#">
+                        <img src="img/sample160.jpg" alt="">
+                        <div style="margin-top: 10px; ">옷옷옷옷옷</div>
+                        <div style="font-weight: bold; margin-top: 10px;">18,000원</div>
+                        </a>
+                </div>
+            </div>
+        
+        
+        
+        </div>
+
 
     </div>
-    <br>
-    <br>
-    <br>
 
-    <div style="float :left; margin: 0px 20% 0px 20%; border-top: 5px solid skyblue; width: 1160px; max-width: 1160px; height: 800px;"></div>
+
+    <!--경계-->
+    <div style="width: 1200px; height: 50px;">
+    </div>
+
+
+
+    <div style="float :auto; margin: 0px 20% 0px 20%; border-top: 5px solid skyblue; border-bottom: 1px solid #cecec9;
+     width: 1160px; max-width: 1160px; height: 600px;">
+    
+
+        <!-- 카테고리 구역-->
+        <div style="float: left; width: 180px; border-right: 1px solid #cecec9; height: 600px; text-align: center;">
+
+            <div style=" font: bold; font-size: 30px; color: skyblue; margin-top: 40px;"><b>남성패션</b></div>
+            <div style="float: left; margin-left: 30px;">바로가기 ></div>
+
+            <div style="float: left;">
+                <div style=" font-size: 20px; color: skyblue; margin-top: 220px; margin-left: 20px; "><b>HOT 키워드</b></div>
+                <div style=" width: 120px; height: 34px; border: 1px solid #cecec9; margin-left: 20px; margin-top: 5px; color: skyblue; "><div style="margin-top: 5px;"> #keyword1</div></div>
+                <div style=" width: 120px; height: 34px; border: 1px solid #cecec9; margin-left: 20px; margin-top: 5px; color: skyblue; "><div style="margin-top: 5px;"> #keyword2</div></div>
+                <div style=" width: 120px; height: 34px; border: 1px solid #cecec9; margin-left: 20px; margin-top: 5px; color: skyblue; "><div style="margin-top: 5px;"> #keyword3</div></div>
+                <div style=" width: 120px; height: 34px; border: 1px solid #cecec9; margin-left: 20px; margin-top: 5px; color: skyblue; "><div style="margin-top: 5px;"> #keyword4</div></div>
+                <div style=" width: 120px; height: 34px; border: 1px solid #cecec9; margin-left: 20px; margin-top: 5px; color: skyblue; "><div style="margin-top: 5px;"> #keyword5</div></div>
+                <div style=" width: 120px; height: 34px; border: 1px solid #cecec9; margin-left: 20px; margin-top: 5px; color: skyblue; "><div style="margin-top: 5px;"> #keyword6</div></div>
+            </div>
+        </div>
+
+
+        <!--프로모션 구역-->
+        <div style="float: left;width: 325px; height: 600px;">
+            <img style="width: 325px; height: 595px;" src="img/promotion2.jpg" alt="">
+        </div>
+
+
+
+        <!--아이템 구역-->
+        <div style="float:left;">
+        
+            <!--상단-->
+            <div style="width: 630px; height: 270px; margin: 20px 10px 0px 10px;">
+            
+                    <div style="float: left;  width: 190px; height: 260px; margin: 0px 10px 0px 20px;">
+                        <a href="#">
+                        <img src="img/sample160.jpg" alt="">
+                        <div style="margin-top: 10px; ">옷옷옷옷옷</div>
+                        <div style="font-weight: bold; margin-top: 10px;">18,000원</div>
+                        </a>
+                    </div>
+                    <div style="float: left; width: 190px; height: 260px; margin: 0px 10px 0px 0px;">
+                        <a href="#">
+                            <img src="img/sample160_2.jpg" alt="">
+                            <div style="margin-top: 10px; ">옷옷옷옷옷</div>
+                            <div style="font-weight: bold; margin-top: 10px;">18,000원</div>
+                            </a>
+                    </div>
+                    <div style="float: left; width: 190px; height: 260px; margin: 0px 5px 0px 0px;">
+                        <a href="#">
+                            <img src="img/sample160_3.jpg" alt="">
+                            <div style="margin-top: 10px; ">옷옷옷옷옷</div>
+                            <div style="font-weight: bold; margin-top: 10px;">18,000원</div>
+                            </a>
+                    </div>
+            
+            </div>
+        
+        <hr>
+            <!--하단-->
+            <div style="width: 630px; height: 270px; margin: 20px 10px 0px 10px;">
+            
+                <div style="float: left;  width: 190px; height: 260px; margin: 0px 10px 0px 20px;">
+                    <a href="#">
+                    <img src="img/sample160_3.jpg" alt="">
+                    <div style="margin-top: 10px; ">옷옷옷옷옷</div>
+                    <div style="font-weight: bold; margin-top: 10px;">18,000원</div>
+                    </a>
+                </div>
+                <div style="float: left; width: 190px; height: 260px; margin: 0px 10px 0px 0px;">
+                    <a href="#">
+                        <img src="img/sample160_2.jpg" alt="">
+                        <div style="margin-top: 10px; ">옷옷옷옷옷</div>
+                        <div style="font-weight: bold; margin-top: 10px;">18,000원</div>
+                        </a>
+                </div>
+                <div style="float: left; width: 190px; height: 260px; margin: 0px 5px 0px 0px;">
+                    <a href="#">
+                        <img src="img/sample160.jpg" alt="">
+                        <div style="margin-top: 10px; ">옷옷옷옷옷</div>
+                        <div style="font-weight: bold; margin-top: 10px;">18,000원</div>
+                        </a>
+                </div>
+            </div>
+        
+        
+        
+        </div>
+
+
+    </div>
+    
+</div> <!--전체 바디 종료-->
+<!--경계-->
+<div style="width: 1200px; height: 50px;">
+</div>
 
 
 

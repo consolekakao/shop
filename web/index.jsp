@@ -50,7 +50,7 @@ a:link {  color: black; text-decoration: none;}
 <body style="margin: 0px 0px 0px 0px;"> 
     <!--상단 시작-->
 
-    
+   
 
         <div class="top_bar" style="overflow:hidden;float:left;text-align:center;width:100%;
         height:100px; min-width: 1200px;margin:-10px -10px 0px 0px;background-color:#467ef7;">
