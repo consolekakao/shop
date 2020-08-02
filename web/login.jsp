@@ -32,7 +32,7 @@
     <center>
 
         
-        <img style="margin-top: 500px;" src="img/alpang.gif" alt="">
+        <img style="margin-top: 200px;" src="img/alpang.gif" alt="">
         
     <form action="logincheck.jsp" method="POST">
         <div class="form-group">
