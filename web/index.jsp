@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.sql.*" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -40,8 +41,32 @@
     <div style=" width: 100%; min-width: 1400px; height: 5000px; min-height: 900px; "> <!--메인열기-->
    
         <div style="float: left; width: 100%; min-width: 1000px; height: 100%; margin-left: 0px;"> <!--상품 1-->
+<%
+            String dbid = "alpacao";
+            String dbpw = "alpaca16";
+            String dbname = "alpacao";
+            String tablename = "shopitem";
+            Connection conn = null;
+            ResultSet rs = null;
+            PreparedStatement pstmt = null;
+            
+                Class.forName("com.mysql.jdbc.Driver");
+                conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/alpacao?useUnicode=true&characterEncoding=utf-8", "alpacao", "alpaca16");
+                String sql = "select itemseller, count(*) as cnt from shopitem group by itemseller order by cnt DESC";
+                pstmt = conn.prepareStatement(sql);
+                rs = pstmt.executeQuery();
+                rs.next();
+                while(rs.next()){
 
-
+                    out.print(rs.getString("itemseller")+"   ");
+                    out.print(rs.getString("cnt")+"\r\n");
+                
+                }
+       
+       
+        
+            
+        %>
 
 
             
@@ -53,9 +78,7 @@
             %>
 
 
-            <!--상품 2시작-->
             <div style="width: 80%; height: 600px; background-color: #ffffff; margin-top: 30px; border-top: 5px solid skyblue; border-bottom: 1px solid #cecec9;">
-
                 <!--좌측-->   
                 <div style="float: left; width: 15%; height: 100%; ">
                    <div style="margin: 40px 0px 0px 30px; font:bold; font-size: 30px; color: skyblue; ">
