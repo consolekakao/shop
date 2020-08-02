@@ -14,9 +14,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="css.css" type="text/css">
 </head>
-<body style="min-width: 1000px; max-width: 1920px;">
+<body style="min-width: 1000px; max-width: 1920px; text-align: center;">
+  <center>  <img style="width: 100%; text-align: center;" src="img/main.jpg" alt=""> </center>
     
-    <div style=" width: 100%; min-width: 1130px; height: 200px; background-image: url(img/main.jpg);"> </div>
     <div style="width: 100%; height: 40px; background-color: #e9e9e9;">
          <div style="width: 70%; float:right;margin: 0px 0px 0px 0px;">
                     <% if(session.getAttribute("id") == null) { %>
@@ -28,12 +28,8 @@
                     <a href="logout.jsp"> 로그아웃 </a>
                     <%
                         }
-                    %>
-
-
-
-
-                     |
+                    %>  
+                    |
                     <a href="#"> 장바구니 </a> | <a href="#"> 주문/배송 </a> | 
                     <a href="#"> 고객센터 </a> 
                 </div>
