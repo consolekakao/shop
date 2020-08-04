@@ -8,20 +8,10 @@
 
 <body>
 <%
-    String id = request.getParameter("id");
-    String pw = request.getParameter("pw");
+   String id =request.getParameter("id");
+   String pw = request.getParameter("pw");
 
 
-    Controller c = new Controller();
-    boolean p = c.cccc("123","123");
-    out.print(p);
-
-
-/*
-
-
-    //Sha sha = new Sha();
-    //pw = sha.sha256(pw);
     String dbid = "alpacao";
     String dbpw = "alpaca16";
     String dbname = "alpacao";
@@ -47,24 +37,22 @@
         else
         {
 
-    */
+    
 
 %>
 
-<!--
 <script>
     alert("로그인에 실패하였습니다.");
     location.href="http://alpacao.cafe24.com/shop/login.jsp"; // 로그인페이지로 이동시킴
 </script>
 
--->
 <%
-    /*
+    
         }
     }catch(Exception e) {
         out.print(e);
     }
-    */
+    
 %>
 
 
