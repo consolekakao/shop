@@ -1,5 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.sql.*" %>
+<%@ page import="com.oreilly.servlet.MultipartRequest" %>
+<%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy" %>
+<%@ page import="java.util.Enumeration" %>
 
 <!DOCTYPE html>
 <html>
@@ -40,8 +43,8 @@ try{
 <form name="filecheck" action="fileCheck.jsp" method="post">
     <input type="hidden" name="name" value="<%=name %>">
     <input type="hidden" name="code" value="<%=code %>">
-    <input type="hidden" name="filename1" value="<%=file1 %>">
-    <input type="hidden" name="filename2" value="<%=file2 %>">
+ <!--   <input type="hidden" name="filename1" value="<%=filename1 %>">
+    <input type="hidden" name="filename2" value="<%=filename2 %>">-->
 </form>
 <a href="#" onclick="javascript:filecheck.submit()">업로드 확인 및 다운로드 페이지이동 </a>
 </body>
