@@ -8,15 +8,15 @@
 </head>
 <body>
 
-    <div>
-    <form action="uploadcheck.jsp" method="POST" enctype="multipart/form-data">
+    <div id="q">
+    <form id="dddd" action="uploadcheck.jsp" method="POST" enctype="multipart/form-data">
     
     
-    <div id="ff">
+    <div id="ff0">
     <input type="file" id="exampleInputFile" name="file1"><br>
     </div>
-    <input type="button" value="추가" onclick="addform();">
-
+    <input id="btn" type="button" value="추가" onclick="addform();">
+    <input type="hidden" id="count" name="count" value="0">
     
     <input type="submit">
     </div>
@@ -29,15 +29,27 @@
     var count = 1;
 
     function addform(){
-        var addfile = document.getElementById("exampleInputFile");
+        count++;
+        document.getElementById("count").value = count;
+        var addfile = document.getElementById("dddd");
         var str = "";
         str += "<br> <input type='file' id='exampleInputFile' name='file"+count+"'>" ;
         var adddiv = document.createElement("div");
         adddiv.id = "ff"+count;
         adddiv.innerHTML = str;
         addfile.appendChild(adddiv);
-        count++;
-         
+        
+
+        var element = document.getElementById("dddd");
+        element.removeChild(element);
+        
+        //var btn = document.getElementById("dddd");
+        //btn.removeChild(btn);
+        //var sub = document.getElementById("dddd");
+        //sub.removeChild(sub);
+
+      // element.innerHTML += " <input type='hidden' id='count' value='"+count+"'> + <br> <input id='btn' type='button' value='추가' onclick='addform();'> <input id='sub' type='hidden' id='count' value='0'>";
+        
     }
 </script>
 
