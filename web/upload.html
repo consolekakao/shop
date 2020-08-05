@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,38 +8,61 @@
 </head>
 <body>
 
-    <div>
-    <form action="uploadcheck.jsp" method="POST" enctype="multipart/form-data">
-    <input style="width: 200px;" type="text" class="form-control"  name="code" placeholder="상품코드를 입력하세요"> <br>
-    <input style="width: 200px;" type="text" class="form-control"  name="name" placeholder="상품명을 입력하세요"> <br>
-    <input style="width: 200px;" type="text" class="form-control"  name="count" placeholder="수량을 입력하세요"> <br>
-    <input style="width: 200px;" type="text" class="form-control"  name="price" placeholder="가격을 입력하세요"> <br>
-    <div id="ff">
-    <input type="file" id="exampleInputFile" name="file1"><br>
-    </div>
-    <button onclick="addform();"> 이미지 추가 </button> <br>
-
+   
+    <form id="dddd" action="uploadcheck.jsp" method="POST" enctype="multipart/form-data">
+        <input style="width: 200px;" type="text" class="form-control"  name="code" placeholder="상품코드를 입력하세요"> <br>
+        <input style="width: 200px;" type="text" class="form-control"  name="name" placeholder="상품명을 입력하세요"> <br>      
+        <input style="width: 200px;" type="text" class="form-control"  name="itemcount" placeholder="수량을 입력하세요">   <br>
+        썸네일 이미지 업로드 <br><input type="file" name="thumnail" id="thumnail"> <br>
+        <div id = "qwer" style="background-color: aqua;">
+            상세이미지 업로드
+        </div>    
+    <input id="btn" type="button" value="추가" onclick="addform();">
+    <input id="btn" type="button" value="제거" onclick="delform();">
+    <input type="hidden" id="count" name="filecount" value="1">
     
-
-    </div>
-    <br><br><br><br>
     <input type="submit">
+   
+    
+   
 </form>
-
+<br><br><br><br>
 <script>
 
-    var count = 1;
+    var count = 0;
+    function delform(){
+        if(count>0){
+        var ele = document.getElementById('ff'+count);
+        ele.remove();
+        count--;
+        console.log(count)
+        }
+        else{alert("더이상 제거할 이미지가 없습니다.");}
+        
+    }
+
 
     function addform(){
-        var addfile = document.getElementById("exampleInputFile");
-        var str = "";
-        str += "<br> <input type='file' id='exampleInputFile' name='file"+count+"'>" ;
-        var adddiv = document.createElement("div");
-        adddiv.id = "ff"+count;
-        adddiv.innerHTML = str;
-        addfile.appendChild(adddiv);
+        
+        if(count>=10){   
+            alert("사진은 최대 10장까지 업로드 가능합니다.");
+            delform();
+        }
+
+        if (count<10){
         count++;
-         
+        document.getElementById("count").value = count;
+        var addfile = document.getElementById("qwer");
+        var str = "";
+        
+        var adddiv = document.createElement("ff0");
+        adddiv.id = "ff"+count;
+        addfile.appendChild(adddiv);
+        str += "<br> <input type='file' id='exampleInputFile' name='file"+(count)+"'>" ;
+        adddiv.innerHTML = str;
+        console.log(count)
+        }
+        
     }
 </script>
 
