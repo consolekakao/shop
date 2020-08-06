@@ -3,6 +3,10 @@
 <%@ page import="com.oreilly.servlet.MultipartRequest" %>
 <%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy" %>
 <%@ page import="java.util.Enumeration" %>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.text.SimpleDateFormat" %>
+<%@ page import="java.io.File" %>
+
 
 <!DOCTYPE html>
 <html>
@@ -28,23 +32,60 @@ String filename2="";
 String thum = "";
 	
 try{
-    MultipartRequest multi=new MultipartRequest(request,uploadPath,size,"euc-kr",new DefaultFileRenamePolicy());
+    MultipartRequest multi=new MultipartRequest(request,uploadPath,size,"UTF-8",new DefaultFileRenamePolicy());
 		
+   
+
+
+
     name=multi.getParameter("name");
     code=multi.getParameter("code");
     itemcount=multi.getParameter("itemcount");
     filecount=multi.getParameter("filecount");
 	thumnail=multi.getParameter("thumnail");	
     Enumeration files = multi.getFileNames();
+    out.print(Integer.parseInt(filecount));
+
+  
+
+
+
 
 
     String file = (String)files.nextElement();
     thum = multi.getFilesystemName(file); //썸네일
     out.print(thum);
 
-    String file1 = (String)files.nextElement();
+
+
+  String[] f = new String[10];
+    String now = new SimpleDateFormat("yyyyMMddHmsS").format(new Date());  //현재시간
     
-    filename1 = multi.getFilesystemName(file1);
+    for(int i =0;i<Integer.parseInt(filecount);i++)
+    {
+        file = (String)files.nextElement();
+        (f[i]) = multi.getFilesystemName(file);
+       
+        int j = -1;
+        j = f[i].lastIndexOf("."); // 파일 확장자 위치
+        String realFileName = now + f[i].substring(j, f[i].length());  //현재시간과 확장자 합치기
+   
+        File oldFile = new File(uploadPath +"/"+ thum);
+        File newFile = new File(uploadPath +"/"+  realFileName);
+        oldFile.renameTo(newFile); // 파일명 변경
+    }
+
+
+        
+        int i = -1;
+        i = thum.lastIndexOf("."); // 파일 확장자 위치
+        String realFileName = now + thum.substring(i, thum.length());  //현재시간과 확장자 합치기
+   
+    File oldFile = new File(uploadPath +"/"+ thum);
+    File newFile = new File(uploadPath +"/"+  realFileName);
+    oldFile.renameTo(newFile); // 파일명 변경
+  
+
 
 
 
