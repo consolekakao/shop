@@ -44,39 +44,37 @@ try{
     filecount=multi.getParameter("filecount");
 	thumnail=multi.getParameter("thumnail");	
     Enumeration files = multi.getFileNames();
-    out.print(Integer.parseInt(filecount));
-
-  
-
-
-
-
+    
 
     String file = (String)files.nextElement();
     thum = multi.getFilesystemName(file); //썸네일
-    out.print(thum);
+    
 
 
 
   String[] f = new String[10];
     String now = new SimpleDateFormat("yyyyMMddHmsS").format(new Date());  //현재시간
-    
     for(int i =0;i<Integer.parseInt(filecount);i++)
     {
         file = (String)files.nextElement();
-        (f[i]) = multi.getFilesystemName(file);
-       
+        f[i] = multi.getFilesystemName(file);
         int j = -1;
         j = f[i].lastIndexOf("."); // 파일 확장자 위치
         String realFileName = now + f[i].substring(j, f[i].length());  //현재시간과 확장자 합치기
-   
-        File oldFile = new File(uploadPath +"/"+ thum);
+        out.print(i+"<br>");
+        out.print("<br>" + realFileName);
+        File oldFile = new File(uploadPath +"/"+ f[i]);
+        out.print("기존파일명: " + oldFile);
         File newFile = new File(uploadPath +"/"+  realFileName);
+        out.print("<br>");
+        out.print("새로운파일명: " + newFile);
+        out.print(realFileName);
         oldFile.renameTo(newFile); // 파일명 변경
+        out.print("<br>"+realFileName);
     }
+    
 
 
-        
         int i = -1;
         i = thum.lastIndexOf("."); // 파일 확장자 위치
         String realFileName = now + thum.substring(i, thum.length());  //현재시간과 확장자 합치기
