@@ -80,7 +80,6 @@ try{
     }
     
 
-
         int i = -1;
         i = thum.lastIndexOf("."); // 파일 확장자 위치
         String realFileName = now + thum.substring(i, thum.length());  //현재시간과 확장자 합치기
@@ -89,9 +88,6 @@ try{
     File newFile = new File(uploadPath +"/"+  realFileName);
     oldFile.renameTo(newFile); // 파일명 변경
   
-
-
-
 
 
 }catch(Exception e){
@@ -105,5 +101,5 @@ try{
  <!--   <input type="hidden" name="filename1" value="<%=filename1 %>">
     <input type="hidden" name="filename2" value="<%=filename2 %>">-->
 </form>
-<a href="#" onclick="javascript:filecheck.submit()">업로드 확인 및 다운로드 페이지이동 </a>
+
 </body>
