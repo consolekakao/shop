@@ -34,9 +34,6 @@ String thum = "";
 try{
     MultipartRequest multi=new MultipartRequest(request,uploadPath,size,"UTF-8",new DefaultFileRenamePolicy());
 		
-   
-
-
 
     name=multi.getParameter("name");
     code=multi.getParameter("code");
@@ -54,26 +51,20 @@ try{
 
   String[] f = new String[10];
     String now = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());  //현재시간
-    for(int i =1;i<(Integer.parseInt(filecount)+1);i++)
+    for(int i =0;i<(Integer.parseInt(filecount));i++)
     {
-        out.print(Integer.parseInt(filecount)+1);
-        out.print("들어옴");
+        out.print(Integer.parseInt(filecount) + "    " + i);
+        out.print("<br>");
+        out.print("for 들어옴");
         file = (String)files.nextElement();
         f[i] = multi.getFilesystemName(file);
         int j = -1;
         j = f[i].lastIndexOf("."); // 파일 확장자 위치
-        
-        
-        
-        
         File oldFile = new File(uploadPath +"/"+ f[i]);
-        
         String realFileName = now + f[i] ;  //현재시간과 확장자 합치기
-        
         File newFile = new File(uploadPath +"/"+  realFileName);
         out.print("<br>");
         oldFile.renameTo(newFile); // 파일명 변경
-        
         out.print("  i = " + i + "   cnt = " + Integer.parseInt(filecount) + "<br>");
         out.print(oldFile + "     " + realFileName);
         
