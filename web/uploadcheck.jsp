@@ -30,26 +30,51 @@ String thumnail = "";
 String filename1="";
 String filename2="";
 String thum = "";
-	
+
+
+
+
+
 try{
     MultipartRequest multi=new MultipartRequest(request,uploadPath,size,"UTF-8",new DefaultFileRenamePolicy());
 		
+        out.print(multi.getParameter("1")+"<br>");
+        out.print(multi.getParameter("2")+"<br>");
+        out.print(multi.getParameter("3")+"<br>");
+        
 
     name=multi.getParameter("name");
     code=multi.getParameter("code");
     itemcount=multi.getParameter("itemcount");
     filecount=multi.getParameter("filecount");
 	thumnail=multi.getParameter("thumnail");	
+    String name1;
+    String data;
     Enumeration files = multi.getFileNames();
+int i = 0;
+while(files.hasMoreElements()){
+    out.print(" <br>");
     
+out.print(i+ "<br>");
+
+name1 = (String)files.nextElement();
+out.print(name1);   
+data = multi.getOriginalFileName(name1);
+out.print("     " +data);
+
+
+i++;
+
+}
+
 
     String file = (String)files.nextElement();
     thum = multi.getFilesystemName(file); //썸네일
-    
+     
 
+    /*
 
-
-  String[] f = new String[10];
+    String[] f = new String[10];
     String now = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());  //현재시간
     for(int i =0;i<(Integer.parseInt(filecount));i++)
     {
@@ -74,12 +99,12 @@ try{
         int i = -1;
         i = thum.lastIndexOf("."); // 파일 확장자 위치
         String realFileName = now + thum.substring(i, thum.length());  //현재시간과 확장자 합치기
-   
+  
     File oldFile = new File(uploadPath +"/"+ thum);
     File newFile = new File(uploadPath +"/"+  realFileName);
     oldFile.renameTo(newFile); // 파일명 변경
   
-
+*/
 
 }catch(Exception e){
     e.printStackTrace();
