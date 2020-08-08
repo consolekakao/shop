@@ -21,13 +21,8 @@
     <input id="btn" type="button" value="제거" onclick="delform();">
     <input type="hidden" id="count" name="filecount" value="1">
 
-    <input type="text" id="te" name="1" value="1"> <br>
-    <input type="text" id="te" name="2" value="2"> <br>
-    <input type="text" id="te" name="3" value="3"> <br>
 
-    <input type='file' id='exampleInputFile' name='av'> <br>
-    <input type='file' id='exampleInputFile' name='zv'> <br>
-    <input type='file' id='exampleInputFile' name='bv'> <br>
+ 
     <input type="submit">
    
     
@@ -36,12 +31,12 @@
 <br><br><br><br>
 <script>
 
-    var count = 5;
+    var count = 0;
     function delform(){
         if(count>0){
         var ele = document.getElementById('ff'+count);
         ele.remove();
-        count--;
+        count++;
         console.log(count)
         }
         else{alert("더이상 제거할 이미지가 없습니다.");}

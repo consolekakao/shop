@@ -38,9 +38,6 @@ String thum = "";
 try{
     MultipartRequest multi=new MultipartRequest(request,uploadPath,size,"UTF-8",new DefaultFileRenamePolicy());
 		
-        out.print(multi.getParameter("1")+"<br>");
-        out.print(multi.getParameter("2")+"<br>");
-        out.print(multi.getParameter("3")+"<br>");
         
 
     name=multi.getParameter("name");
@@ -51,17 +48,14 @@ try{
     String name1;
     String data;
     Enumeration files = multi.getFileNames();
-int i = 0;
+int i =1;
 while(files.hasMoreElements()){
-    out.print(" <br>");
     
-out.print(i+ "<br>");
+    
 
 name1 = (String)files.nextElement();
-out.print(name1);   
 data = multi.getOriginalFileName(name1);
-out.print("     " +data);
-
+out.print("     "+i + " : " +data + "<br> ");
 
 i++;
 
