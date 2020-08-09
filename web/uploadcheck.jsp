@@ -66,6 +66,7 @@ try{
         String realFileName = now +"-"+code+"-" + f[i] ;  //현재시간과 확장자 합치기
         File newFile = new File(uploadPath +"/"+  realFileName);
         oldFile.renameTo(newFile); // 파일명 변경
+        out.print("----" + newFile + "-----<br>");
         i++;
 
 }
