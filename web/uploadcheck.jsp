@@ -58,6 +58,9 @@ try{
     fname = (String)files.nextElement();
         int j = -1;
         f[i] = multi.getFilesystemName(fname);
+        
+        out.print(f[i]);
+        out.print("<br>");
         j = f[i].lastIndexOf("."); // 파일 확장자 위치
         File oldFile = new File(uploadPath +"/"+ f[i]);
         String realFileName = now +"-"+code+"-" + f[i] ;  //현재시간과 확장자 합치기
@@ -70,7 +73,7 @@ try{
 
     String file = (String)files.nextElement();
     thum = multi.getFilesystemName(file); //썸네일
-     
+     out.print(thum);
 
   
 

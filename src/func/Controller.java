@@ -1,8 +1,10 @@
 package func;
+
+
+
 import java.sql.*;
 public class Controller {
 public boolean logincheck(String id,String pw){
-
     String dbid = "alpacao";
     String dbpw = "alpaca16";
     String dbname = "alpacao";
@@ -36,6 +38,10 @@ public boolean logincheck(String id,String pw){
     }
 
 
+    
+
+
+    }
 
 
 
@@ -44,5 +50,3 @@ public boolean logincheck(String id,String pw){
 
 
 
-
-}
